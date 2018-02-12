@@ -1,0 +1,1 @@
+/* This is the script file for creating the structure for our project database */
