@@ -1,0 +1,3 @@
+Truncated error when trying to store a value
+
+Happens when you try to insert/update a record on the database, with some value that is larger than the database field can hold.

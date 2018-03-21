@@ -1,0 +1,22 @@
+One CRM Central Sales Table
+
+Store 1
+
+Store 2
+
+Store 3 
+
+^^ Store IDs
+
+-----------------------
+
+
+1 Purchased
+
+2 Sold
+
+3 On Hold
+
+4 Waste
+
+ 

@@ -1,0 +1,16 @@
+/* This transaction can be run as an example in order to 
+insert values (a new record) simultaneously into both tables with a INCREMENTING Primary Key in the first table and a Foreign Key with the same BIGINT OR INT data type that matches in the second table - this helps make sure that the values are the same or maintain Referential Integrity */
+
+BEGIN TRAN t2
+
+DECLARE @Sale_ID BIGINT
+
+INSERT Sales_Store1
+VALUES (3, 3, '02-16-2002', 0.0, 'Check', NULL, 0.0, NULL)
+
+SET @Sale_ID = SCOPE_IDENTITY()
+
+INSERT Sales_Details_Store1
+VALUES (@Sale_ID, 3, 4, 10.00, 0.0, '02-03-1992', 7)
+
+COMMIT TRAN t2;

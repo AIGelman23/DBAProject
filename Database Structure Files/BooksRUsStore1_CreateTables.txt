@@ -1,0 +1,146 @@
+CREATE TABLE Sales_Details_Store1 (
+    ID bigint NOT NULL IDENTITY(1,1),
+    Sale_ID bigint,
+    Product_ID bigint, 
+    Quantity int,
+    Unit_Price decimal(13,2),
+    Discount decimal(5,4),
+    Date_Allocated datetime,
+    Inventory_ID bigint
+);
+
+
+CREATE TABLE Sales_Store1 (
+    Sale_ID bigint NOT NULL IDENTITY(1,1),
+    Employee_ID bigint,
+    Customer_ID bigint,
+    Sale_Date datetime,
+    Taxes money,
+    Payment_Type varchar (15),
+    Notes varchar(max),
+    Tax_Rate decimal(5,4),
+    Tax_Status int
+);
+
+CREATE TABLE Customers_Store1 (
+    ID bigint NOT NULL IDENTITY(1,1),
+    Last_Name varchar (50),
+    First_Name varchar (50),
+    Email_Address varchar (80),
+    Home_Phone varchar (14),
+    Mobile_Phone varchar (14),
+    Fax_Number varchar (14),
+    Address varchar (50),
+    City varchar (50),
+    State_Province varchar (2),
+    ZIP_PostalCode varchar (10),
+    Country_Region varchar (40),
+    Coupon_Customer bit
+);
+
+CREATE TABLE Employees_Store1 (
+    Employee_ID bigint NOT NULL IDENTITY(1,1),
+    Company varchar (50),
+    Last_Name varchar (50),
+    First_Name varchar (50),
+    Email_Address varchar (80),
+    Job_Title varchar (35),
+    Business_Phone varchar (14),
+    Home_Phone varchar (14),
+    Mobile_Phone varchar (14),
+    Fax_Number varchar (14),
+    Address varchar (50),
+    City varchar (50),
+    State_Province varchar (2),
+    ZIP_PostalCode varchar (10),
+    Country_Region varchar (40)
+);
+
+CREATE TABLE Orders_Tax_Status_Store1 (
+    Tax_Status_ID bigint NOT NULL,
+    Tax_Status_Name varchar (10),
+);
+
+CREATE TABLE Products_Store1 (
+    Supplier_ID int NOT NULL,
+    ID bigint NOT NULL IDENTITY(1,1),
+    Product_Code varchar (255),
+    Product_Name varchar (255),
+    Author varchar (75),
+    Standard_Cost money,
+    List_Price money,
+    Reorder_Level int,
+    Target_Level int,
+    Discontinued bit,
+    Minimum_Reorder_Quantity int,
+    Attachments varbinary(max)
+);
+
+CREATE TABLE Inventory_Transactions_Store1 (
+    Transaction_ID bigint NOT NULL IDENTITY(1,1),
+    Transaction_Type bigint,
+    Transaction_Created_Date datetime,
+    Transaction_Modified_Date datetime,
+    Product_ID bigint,
+    Quantity int,
+    Purchase_Order_ID bigint,
+    Customer_Order_ID bigint,
+    Comments varchar(max)
+);
+
+CREATE TABLE Inventory_Transaction_Types_Store1 (
+    Transaction_Type_ID bigint NOT NULL,
+    Type_Name varchar (15),
+);
+
+CREATE TABLE Suppliers_Store1 (
+    Supplier_ID int not null,
+    Company varchar null, 
+    Last_Name varchar null,
+    First_Name varchar null,
+    Email_Address varchar null,
+    Job_Title varchar null,
+    Business_Phone varchar null,
+    Home_Phone varchar null,
+    Mobile_Phone varchar null,
+    Fax_Number varchar null,
+    Supplier_Address varchar null,
+    City varchar null, 
+    State_Province varchar null,
+    ZIP_PostalCode varchar null, 
+    Country_Region varchar null, 
+    Web_Page varchar null, 
+    Notes varchar null,
+    Attachments varbinary null
+);
+
+ALTER TABLE Sales_Details
+ADD PRIMARY KEY (ID);
+
+ALTER TABLE Sales
+ADD PRIMARY KEY (Sale_ID); 
+
+ALTER TABLE Customers
+ADD PRIMARY KEY (ID); 
+
+ALTER TABLE Employees
+ADD PRIMARY KEY (Employee_ID);
+
+ALTER TABLE Orders_Tax_Status
+ADD PRIMARY KEY (Tax_Status_ID);
+
+ALTER TABLE Products_Store2
+ADD PRIMARY KEY (ID);
+
+ALTER TABLE Inventory_Transactions
+ADD PRIMARY KEY (Transaction_ID);
+
+ALTER TABLE Inventory_Transaction_Types 
+ADD PRIMARY KEY (Transaction_Type_ID);
+
+
+
+
+
+
+

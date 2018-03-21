@@ -1,4 +1,3 @@
-/* Script for checking Foreign Key constraint - in order to see which Primary Key it references after being created in MS Azure Database. */
 
 SELECT fk.Name AS 'FKName'
           ,OBJECT_NAME(fk.parent_object_id) 'ParentTable'
@@ -14,7 +13,4 @@ SELECT fk.Name AS 'FKName'
            INNER JOIN sys.columns cref
                 ON  fkc.referenced_object_id = cref.object_id
                 AND fkc.referenced_column_id = cref.column_id
-
-
-
 

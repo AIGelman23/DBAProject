@@ -1,0 +1,358 @@
+
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (1, '3/24/2006', '3/24/2006', 41, 200, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '3/24/2006', '3/24/2006', 41, 200, NULL, NULL, 'Fill Back Ordered product, Order #36');
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (1, '3/24/2006', '3/24/2006', 19, 30, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '3/24/2006', '3/24/2006', 19, 30, NULL, NULL, 'Fill Back Ordered product, Order #33');
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (1, '3/24/2006', '3/24/2006', 34, 100, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '3/24/2006', '3/24/2006', 34, 100, NULL, NULL, 'Fill Back Ordered product, Order #30');
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '3/24/2006', '4/4/2006', 6, 10, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '3/24/2006', '4/4/2006', 4, 10, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (3, '3/24/2006', '3/24/2006', 80, 20, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (3, '3/24/2006', '3/24/2006', 81, 50, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (3, '3/24/2006', '3/24/2006', 1, 25, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (3, '3/24/2006', '3/24/2006', 43, 25, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (3, '3/24/2006', '3/24/2006', 81, 25, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '3/24/2006', '4/4/2006', 40, 50, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '3/24/2006', '4/4/2006', 21, 20, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '3/24/2006', '4/4/2006', 5, 25, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '3/24/2006', '4/4/2006', 41, 30, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '3/24/2006', '4/4/2006', 40, 30, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (3, '3/30/2006', '3/30/2006', 34, 12, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (3, '3/30/2006', '3/30/2006', 34, 10, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (3, '3/30/2006', '3/30/2006', 34', 1, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/3/2006', '4/3/2006', 48, 10, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (1, '4/4/2006', '4/4/2006', 57, 100, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 57, 100, NULL, NULL, 'Fill Back Ordered product, Order #46');
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (1, '4/4/2006', '4/4/2006', 34, 50, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (1, '4/4/2006', '4/4/2006', 43, 250, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (3, '4/4/2006', '4/4/2006', 43, 300, NULL, NULL, 'Fill Back Ordered product, Order #41');
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (1, '4/4/2006', '4/4/2006', 8, 25, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 8, 25, NULL, NULL, 'Fill Back Ordered product, Order #48');
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (1, '4/4/2006', '4/4/2006', 34, 300, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 34, 300, NULL, NULL, 'Fill Back Ordered product, Order #47');
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (1, '4/4/2006', '4/4/2006', 19, 25, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 19, 10, NULL, NULL, 'Fill Back Ordered product, Order #42');
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (1, '4/4/2006', '4/4/2006', 19, 10, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 19, 25, NULL, NULL, 'Fill Back Ordered product, Order #48');
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (1, '4/4/2006', '4/4/2006', 72, 50, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 72, 50, NULL, NULL, 'Fill Back Ordered product, Order #46');
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (1, '4/4/2006', '4/4/2006', 41, 50, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 41, 50, NULL, NULL, 'Fill Back Ordered product, Order #45');
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 34, 87, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 51, 30, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 7, 30, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 17, 40, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 6, 90, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 4, 30, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 48, 40, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 48, 40, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 41, 10, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 43, 5, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 40, 40, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 8, 20, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 80, 15, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 74, 20, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 72, 40, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 8, 40, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 3, 50, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 8, 3, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 20, 40, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/4/2006', '4/4/2006', 52, 40, NULL, NULL, NULL);
+
+INSERT INTO Inventory_Transactions (Transaction_Type, Transaction_Created_Date, Transaction_Modified_Date, Product_ID, Quantity, Purchase_Order_ID, Customer_Order_ID, Comments)
+VALUES (2, '4/25/2006', '4/25/2006', 56, 110, NULL, NULL, NULL);
+
+
+
+
+-------------------
+/* Insert into Products Table */
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (4, 'NWTB-1', 'Petunia Pumping Prickle Pants Book 1', 'Stephen Schmidt', 13.50, 18.00, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (10, 'NWTCO-3', 'Petunia Pumping Prickle Pants Book 2', 'Stephen Schmidt', 7.50, 10.00, 25, 100, 'false', 25, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (10, 'NWTCO-4', 'Petunia Pumping Prickle Pants Book 3', 'Stephen Schmidt', 16.50, 22.00, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (10, 'NWTB-5', 'Petunia Pumping Prickle Pants Book 4', 'Stephen Schmidt', 16.01, 21.35, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (2, 'NWTJP-6', 'Petunia Pumping Prickle Pants Book 5', 'Stephen Schmidt', 18.75, 25.00, 25, 100, 'false', 25, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTJP-6', 'Petunia Pumping Prickle Pants Book 5', 'Stephen Schmidt', 18.75, 25.00, 25, 100, 'false', 25, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (2, 'NWTDFN-7', 'Petunia Pumping Prickle Pants Book 6', 'Stephen Schmidt', 22.50, 30.00, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (8, 'NWTS-8', 'Petunia Pumping Prickle Pants Book 7', 'Stephen Schmidt', 30.00, 40.00, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (2, 'NWTDFN-14', 'Petunia Pumping Prickle Pants Book 8', 'Stephen Schmidt', 17.44, 23.25, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTDFN-14', 'Petunia Pumping Prickle Pants Book 8', 'Stephen Schmidt', 17.44, 23.25, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTCFV-17', 'Petunia Pumping Prickle Pants Book 9', 'Stephen Schmidt', 29.25, 39.00, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (1, 'NWTBGM-19', 'Petunia Pumping Prickle Pants Book 10', 'Stephen Schmidt', 6.90, 9.20, 5, 20, 'false', 5, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (2, 'NWTJP-6', 'Green Eggs and Ham', 'Dr. Seuss', 60.75, 81.00, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTJP-6', 'Green Eggs and Ham', 'Dr. Seuss', 60.75, 81.00, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (1, 'NWTBGM-21', 'Goodnight Moon', 'Margaret Wise Brown', 7.50, 10.00, 5, 20, 'false', 5, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (4, 'NWTB-34', 'Oh, the Places You'' Go!', 'Dr. Seuss', 10.50, 14.00, 15, 60, 'false', 15, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (7, 'NWTCM-40', 'All-of-a-Kind Family', 'Sydney Taylor', 13.80, 18.40, 30, 120, 'false', 30, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTSO-41', 'Amelia Bedelia', 'Peggy Parish', 7.24, 9.65, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (3, 'NWTB-43', 'The Arrival', 'Shaun Tan', 34.50, 46.00, 25, 100, 'false', 25, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (4, 'NWTB-43', 'The Arrival', 'Shaun Tan', 34.50, 46.00, 25, 100, 'false', 25, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (10, 'NWTCA-48', 'Bark, George', 'Jules Feiffer', 9.56, 12.75, 25, 100, 'true', 25, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (2, 'NWTDFN-51', 'Because of Winn-Dixie', 'Kate DiCamillo', 39.75, 53.00, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (1, 'NWTG-52', 'Ben''s Trumpet', 'Rachel Isadora', 5.25, 7.00, 25, 100, 'false', 25, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (1, 'NWTP-56', 'Big Red Lollipop', 'Rukhsana Khan', 28.50, 38.00, 30, 120, 'false', 30, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (1, 'NWTP-57', 'The Birchmark House', 'Louise Erdrich', 14.63, 19.50, 20, 80, 'false', 20, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (8, 'NWTS-65', 'The Book of Three', 'Lloyd Alexander', 15.79, 21.05, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (8, 'NWTS-66', 'Bread and Jam for Frances', 'Russell Hoban', 12.75, 17.00, 20, 80, 'true', 20, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (5, 'NWTD-72', 'Don''t Let the Pigeon Drive the Bus', 'Mo Willems', 26.10, 34.80, 10, 40, 'false', 10, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (2, 'NWTDFN-74', 'Goodnight, Goodnight, Construction Site', 'Sherri Duskey Rinker', 7.50, 10.00, 5, 20, 'false', 5, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTDFN-74', 'Goodnight, Goodnight, Construction Site', 'Sherri Duskey Rinker', 7.50, 10.00, 5, 20, 'false', 5, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (10, 'NWTCO-77', 'The Very Hungry Caterpillar', 'Eric Carle', 9.75, 13.00, 15, 60, 'false', 15, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (2, 'NWTDFN-80', 'Brown Bear, Brown Bear, What Do You See?', 'Eric Carle', 3.00, 3.50, 50, 75, 'false', 25, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (3, 'NWTB-81', '1, 2, 3 to the Zoo', 'Eric Carle', 2.00, 2.99, 100, 125, 'false', 25, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (1, 'NWTB-82', 'Pancakes, Pancakes!', 'Eric Carle', 2.00, 4.00, 20, 100, 'false', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (9, 'NWTCS-83', 'The Tiny Seed', 'Eric Carle', 0.50, 1.80, 30, 200, 'false', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (1, 'NWTBGM-85', 'Tales of the Nimipoo', 'Eric Carle', 9.00, 12.49, 10, 20, 'false', 5, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (1, 'NWTBGM-86', 'Where the Wild Things Are', 'Maurice Sendak', 10.50, 15.99, 10, 20, 'false', 5, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (7, 'NWTB-87', 'The Tale of Peter Rabbit', 'Beatrux Potter', 2.00, 4.00, 20, 50, 'true', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTCFV-88', 'Horton Hatches the Egg', 'Dr. Seuss', 1.00, 1.30, 10, 40, 'false', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTCFV-89', 'On Beyond Zebra!', 'Dr. Seuss', 1.00, 1.50, 10, 40, 'false', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTCFV-90', 'How the Grinch Stole Christmas!', 'Dr. Seuss', 1.00, 1.80, 10, 40, 'false', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTCFV-91', 'One Fish Two Fish Red Fish Blue Fish', 'Dr. Seuss', 1.00, 2.00, 10, 40, 'false', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTCFV-92', 'Madeline', 'Ludwig Bemelmans', 1.00, 1.20, 10, 40, 'false', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTCFV-93', 'The Complete Tales & Poems of Winnie-the-Pooh', 'A. A. Milne', 1.00, 1.20, 10, 40, 'false', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTCFV-94', 'Mercy Watson to the Rescue: Mercy Watson, Book 1', 'Kate DiCamillo', 1.00, 1.50, 10, 40, 'false', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (7, 'NWTCM-95', 'Charlie and the Chocolate Factory', 'Roald Dahl', 0.50, 2.00, 30, 50, 'false', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (7, 'NWTCM-96', 'Stuart Little', 'E.B. White', 2.00, 4.00, 30, 50, 'true', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (1, 'NWTC-82', 'Charlotte''s Web', 'E.B. White', 3.00, 5.00, 50, 200, 'false', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTSO-98', 'Little House in the Big Woods', 'Laura Ingalls Wilder', 1.00, 1.89, 100, 200, 'false', NULL, NULL);
+
+INSERT INTO Products (Supplier_ID, Product_Code, Product_Name, Author, Standard_Cost, List_Price, Reorder_Level, Target_Level, Discontinued, Minimum_Reorder_Quantity, Attachments)
+VALUES (6, 'NWTSO-99', 'Ramona the Pest', 'Beverly Cleary', 1.00, 1.95, 100, 200, 'false', NULL, NULL);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

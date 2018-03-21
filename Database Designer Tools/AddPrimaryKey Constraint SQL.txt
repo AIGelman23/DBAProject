@@ -1,0 +1,4 @@
+/*Add Primary Key to table that is already created*/
+
+ALTER TABLE Products
+ADD PRIMARY KEY (ID);

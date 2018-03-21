@@ -1,0 +1,5 @@
+/*INSERT FILE TO COLUMN for VARBINARY DATATYPE*/
+
+INSERT INTO YourTable(YourVarbinaryColumn)
+  SELECT * FROM
+  OPENROWSET(BULK N'(name of your file to import)', SINGLE_BLOB) AS import

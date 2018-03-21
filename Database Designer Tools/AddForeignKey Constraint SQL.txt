@@ -1,0 +1,5 @@
+/*Add Foreign Key to table that is already created */
+
+ALTER TABLE Orders
+ADD CONSTRAINT FK_PersonOrder
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID); 

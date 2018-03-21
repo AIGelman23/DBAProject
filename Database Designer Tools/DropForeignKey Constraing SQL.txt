@@ -1,0 +1,4 @@
+/*DROP a FOREIGN KEY Constraint*/
+
+ALTER TABLE Orders
+DROP CONSTRAINT FK_PersonOrder; 
