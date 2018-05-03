@@ -1,0 +1,999 @@
+CREATE TABLE Store_Types (
+
+Store_Type_ID int NOT NULL PRIMARY KEY,
+Store_Type varchar(60) NULL
+
+)
+
+
+CREATE TABLE Stores (
+
+Store_ID int NOT NULL PRIMARY KEY, 
+Store_Name varchar(255) NOT NULL,
+Store_Address varchar(125) NULL,
+City varchar(60) NULL,
+State_Province varchar(60) NULL,
+ZIP_PostalCode int NULL, 
+Country_Region varchar(125) NULL,
+Store_Type_ID int NULL
+
+CONSTRAINT Ch_State5 CHECK ([State_Province] IN('AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY')),
+
+CONSTRAINT Ch_ZipCode5 CHECK (Zip_PostalCode LIKE REPLICATE ('[0-9]', 5))
+
+)
+
+CREATE TABLE Store_Sales_Details (
+
+Transaction_ID BIGINT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+Sale_ID BIGINT NULL,
+Product_ID BIGINT NULL,
+Quantity int NOT NULL,
+Discount decimal NOT NULL,
+Date_Allocated DATETIME NULL,
+Inventory_ID BIGINT NULL
+
+)
+
+CREATE TABLE Sales (
+
+Sale_ID BIGINT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+Employee_ID BIGINT NULL,
+Customer_ID BIGINT NULL,
+Sale_Date DATETIME NULL,
+Taxes decimal NOT NULL,
+Notes varchar(max) NULL,
+Tax_Rate decimal NOT NULL,
+Tax_Status int NULL,
+Store_ID int NULL
+
+)
+
+CREATE TABLE Customers (
+
+Customer_ID BIGINT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+Last_Name varchar(72) NOT NULL,
+First_Name varchar(72) NOT NULL,
+Email_Address varchar(60) NULL,
+Home_Phone varchar(10) NULL,
+Mobile_Phone varchar(10) NULL,
+Fax_Number varchar(10) NULL,
+Address1 varchar(125) NOT NULL,
+City varchar(60) NOT NULL,
+State_Province varchar(60) NOT NULL,
+ZIP_PostalCode int NOT NULL,
+Country_Region varchar(125) NOT NULL,
+Store_ID int NULL
+
+CONSTRAINT Home_Phone1 CHECK (Home_Phone LIKE REPLICATE ('[0-9]', 10)), 
+
+CONSTRAINT Mobile_Phone1 CHECK (Mobile_Phone LIKE REPLICATE ('[0-9]', 10)),
+
+CONSTRAINT Fax_Number1 CHECK (Fax_Number LIKE REPLICATE ('[0-9]', 10)),
+
+CONSTRAINT Ch_State CHECK ([State_Province] IN('AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY')),
+
+CONSTRAINT Ch_ZipCode CHECK (ZIP_PostalCode LIKE REPLICATE ('[0-9]', 5))
+
+) 
+
+CREATE TABLE Customer_Types (
+
+Customer_ID BIGINT NULL,
+Cust_Type_ID INT NULL,
+Join_Date datetime NOT NULL,
+Cancel_Date datetime NULL,
+
+[Check constraints here]
+)
+
+CREATE TABLE Types (
+
+Cust_Type_ID int PRIMARY KEY NOT NULL, 
+Customer_Type varchar(30) NOT NULL,
+
+CONSTRAINT Ch_Customer_Type CHECK (Customer_Type = 'Regular Customer' OR Customer_Type ='Discount Customer'
+OR Customer_Type = 'Online Customer')
+
+)
+
+CREATE TABLE Customer_Contact_Activity (
+
+Customer_ID BIGINT NULL,
+Activity_ID int NULL
+
+)
+
+CREATE TABLE Activities (
+
+Activity_ID int NOT NULL PRIMARY KEY,
+Activity varchar(60) NULL,
+[Subject] varchar(255) NULL
+
+)
+
+CREATE TABLE Customer_User_Passwords (
+
+Password_ID BIGINT NULL,
+Customer_ID BIGINT NULL
+
+)
+
+CREATE TABLE Customer_Password (
+
+Password_ID BIGINT PRIMARY KEY NOT NULL,
+[Password] varchar(44) NULL,
+Pswd_Last_Updated datetime NULL
+
+)
+
+CREATE TABLE Employees (
+
+Employee_ID BIGINT PRIMARY KEY NOT NULL,
+Company varchar(255) NOT NULL,
+Last_Name varchar(72) NOT NULL,
+First_Name varchar(72) NOT NULL,
+Email_Address varchar(60) NOT NULL,
+Job_Title varchar(60) NOT NULL,
+Business_Phone varchar(10) NOT NULL,
+Home_Phone varchar(10) NULL,
+Mobile_Phone varchar(10) NULL,
+Fax_Number varchar(10) NULL,
+Employee_Address varchar(125) NOT NULL,
+City varchar(60) NOT NULL,
+State_Province varchar(60) NOT NULL,
+ZIP_PostalCode int NOT NULL,
+Country_Region varchar(125) NOT NULL,
+
+
+CONSTRAINT Business_Phone2 CHECK (Business_Phone LIKE REPLICATE ('[0-9]', 10)),
+
+CONSTRAINT Home_Phone2 CHECK (Home_Phone LIKE REPLICATE ('[0-9]', 10)), 
+
+CONSTRAINT Mobile_Phone2 CHECK (Mobile_Phone LIKE REPLICATE ('[0-9]', 10)),
+
+CONSTRAINT Fax_Number2 CHECK (Fax_Number LIKE REPLICATE ('[0-9]', 10)),
+
+CONSTRAINT Ch_State2 CHECK ([State_Province] IN('AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY')),
+
+CONSTRAINT Ch_ZipCode2 CHECK (Zip_PostalCode LIKE REPLICATE ('[0-9]', 5))
+
+
+)
+
+CREATE TABLE Orders_Tax_Status (
+
+Tax_Status_ID int PRIMARY KEY NOT NULL,
+Tax_Status_Name varchar NOT NULL UNIQUE,
+
+)
+
+CREATE TABLE Store_Products (
+
+Supplier_ID int NULL,
+Product_ID BIGINT PRIMARY KEY NOT NULL,
+Product_Name varchar NOT NULL,
+Author varchar(255) NOT NULL,
+Standard_Cost money NOT NULL,
+List_Price money NOT NULL,
+Reorder_Level int NULL,
+Target_Level int NULL,
+Discontinued bit NOT NULL,
+Minimum_Reorder_Quantity int NULL,
+Attachments varbinary NULL
+
+)
+
+CREATE TABLE Suppliers (
+
+Supplier_ID BIGINT PRIMARY KEY NOT NULL,
+Company varchar(255) NOT NULL,
+Last_Name varchar(72) NOT NULL,
+First_Name varchar(72) NOT NULL,
+Email_Address varchar(60) NOT NULL,
+Job_Title varchar(60) NULL,
+Business_Phone varchar(10) NULL,
+Home_Phone varchar(10) NULL,
+Mobile_Phone varchar(10) NULL,
+Fax_Number varchar(10) NULL,
+Supplier_Address varchar(125) NOT NULL,
+City varchar(60) NOT NULL,
+State_Province varchar(60) NOT NULL,
+ZIP_PostalCode int NOT NULL,
+Country_Region varchar(125) NOT NULL,
+Web_Page varchar NULL,
+Notes varchar(max) NULL,
+Attachments varbinary NULL,
+
+CONSTRAINT Business_Phone3 CHECK (Business_Phone LIKE REPLICATE ('[0-9]', 10)),
+
+CONSTRAINT Home_Phone3 CHECK (Home_Phone LIKE REPLICATE ('[0-9]', 10)), 
+
+CONSTRAINT Mobile_Phone3 CHECK (Mobile_Phone LIKE REPLICATE ('[0-9]', 10)),
+
+CONSTRAINT Fax_Number3 CHECK (Fax_Number LIKE REPLICATE ('[0-9]', 10)),
+
+CONSTRAINT Ch_State3 CHECK ([State_Province] IN('AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY')),
+
+CONSTRAINT Ch_ZipCode3 CHECK (Zip_PostalCode LIKE REPLICATE ('[0-9]', 5))
+
+)
+
+CREATE TABLE Inventory_Transaction_Types (
+
+Transaction_Type_ID BIGINT PRIMARY KEY NOT NULL,
+Type_Name varchar(50) NOT NULL UNIQUE
+
+)
+
+CREATE TABLE Inventory_Transactions (
+
+Transaction_ID BIGINT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+Transaction_Type BIGINT NULL,
+Transaction_Created_Date datetime NOT NULL,
+Transaction_Modified_Date datetime NULL,
+Product_ID BIGINT NOT NULL,
+Quantity int NOT NULL,
+Sale_ID BIGINT NULL, 
+Comments varchar(max) NULL,
+Store_ID int NULL
+
+)
+
+CREATE TABLE Customer_Feedback (
+	
+Customer_ID BIGINT NULL, 
+Lead_Source_ID int NULL, 
+System_Used varchar(50) NOT NULL,
+Remarks varchar(max) NULL,
+Satisfaction_Level int NOT NULL,
+Affordability_Level int NOT NULL,
+
+CONSTRAINT Ch_Satisfaction_Level1 CHECK (Satisfaction_Level LIKE REPLICATE ('[0-5]', 1)),
+
+CONSTRAINT Ch_Afforability_Level1 CHECK (Affordability_Level LIKE REPLICATE ('[0-5]', 1)),
+
+)
+
+
+CREATE TABLE Customer_Service_Status (
+
+Service_Status_ID int NOT NULL PRIMARY KEY,
+Service_Status varchar(60) NULL,
+CONSTRAINT Ch_Status1 CHECK (Service_Status = 'Fair' OR Service_Status ='Poor' OR Service_Status = 'Good' OR Service_Status = 'Great' OR Service_Status = 'Excellent')
+
+)
+
+CREATE TABLE Customer_Service (
+
+Customer_ID BIGINT NULL, 
+Service_Status_ID int NULL
+
+)
+
+
+CREATE TABLE Customer_Leads (
+
+Customer_ID BIGINT NULL,
+Contacted bit NOT NULL,
+Rating varchar(20) NOT NULL,
+Score int NOT NULL, 
+Qualified bit NULL,
+Date_Created datetime NOT NULL,
+
+CONSTRAINT Ch_Score1 CHECK (Score LIKE REPLICATE ('[1-100]', 3)),
+
+)
+
+CREATE TABLE Lead_Status (
+
+Status_ID int NOT NULL PRIMARY KEY, 
+Status varchar(20) NULL,
+CONSTRAINT Ch_Status2 CHECK ([Status]= 'Open' OR [Status]='Working' OR [Status]='Closed Converted' OR [Status]='Closed Not Converted') 
+)
+
+CREATE TABLE Customer_Lead_Status (
+
+Customer_ID BIGINT NULL, 
+Status_ID int NULL, 
+
+)
+
+CREATE TABLE Customer_Lead_Source (
+	
+Lead_Source_ID int PRIMARY KEY NOT NULL,
+Lead_Source varchar(50) NOT NULL,
+Source_Campaign varchar(255) NOT NULL,
+Source_Product varchar(255) NOT NULL,
+Leads_Generated decimal NOT NULL,
+Leads_Qualified decimal NOT NULL,
+Revenue_Generated money NOT NULL,
+Growth_Rate decimal NULL,	
+Churn_Rate decimal NULL,
+Active bit NOT NULL,
+Created_Date datetime NOT NULL,	
+End_Date datetime NOT NULL,
+
+)
+
+CREATE TABLE Lead_Location (
+
+Customer_ID BIGINT NULL, 
+Lead_Geolocation varchar(255) NOT NULL,
+Carrier varchar(60) NOT NULL,
+Country_Code varchar(60) NOT NULL,
+Mobile_Network_Code varchar(60) NOT NULL,
+
+)
+
+CREATE TABLE Customer_Opportunities (
+
+Customer_ID BIGINT NULL,
+Lead_Source_ID int NULL,
+Topic varchar(255) NOT NULL,
+[Description] varchar(255) NOT NULL,
+Opportunity_Type varchar(60) NULL, 
+Opportunity_Amount decimal NULL, 
+Follow_Up_Date datetime NULL,
+Last_Activity_Date datetime NOT NULL,
+Last_Activity varchar(255) NOT NULL,
+Opportunity_Created_Date datetime NOT NULL,
+Last_Modified_Date datetime NOT NULL,
+Projected_Close_Date datetime NULL,
+Close_Probability decimal NOT NULL,
+Projected_Revenue decimal NULL,
+Weighted_Revenue decimal NULL,
+Actual_Revenue decimal NULL,
+Currency_Type varchar(60) NOT NULL,
+Offer_Accepted_Date datetime NULL,
+
+)
+
+CREATE TABLE Sales_Opportunity_Stage (
+
+Customer_ID BIGINT NULL, 
+Opportunity_Stage_ID int NULL,
+
+)
+
+CREATE TABLE Opportunity_Stages (
+
+Opportunity_Stage_ID int NOT NULL PRIMARY KEY,
+Sales_Pipeline_Stage varchar(72) NOT NULL,
+
+
+CONSTRAINT Sales_Pipeline_Stage1 CHECK (Sales_Pipeline_Stage IN('Qualification', 'Discovery', 'Meeting', 'Proposal', 'Closed Won'))
+)
+
+CREATE TABLE Product_Interest (
+
+Customer_ID BIGINT NULL, 
+Product_ID BIGINT NULL, 
+
+)
+
+CREATE TABLE CRM_User
+
+(
+
+Login_ID int PRIMARY KEY NOT NULL,
+Last_Name varchar(72) NOT NULL,
+First_Name varchar(72) NOT NULL,
+Email_Address varchar(60) NOT NULL,
+
+)
+
+
+CREATE TABLE CRM_Roles
+
+(
+
+Role_ID integer PRIMARY KEY,
+Role_Name varchar(60) NOT NULL,
+Description varchar(255) NOT NULL
+
+)
+
+CREATE TABLE CRM_User_Passwords (
+
+Password_ID BIGINT NULL,
+Login_ID int NULL
+
+)
+
+
+CREATE  TABLE CRM_Password (
+
+Password_ID BIGINT NOT NULL PRIMARY KEY, 
+Password varchar(44) NOT NULL, 
+Pswd_Last_Updated datetime NOT NULL,
+Pswd_Created_Date datetime NOT NULL
+
+)
+
+CREATE TABLE CRM_User_Tasks (
+
+Login_ID int NULL,
+Task_ID int NULL
+
+)
+
+CREATE TABLE CRM_Tasks (
+
+Task_ID int NOT NULL PRIMARY KEY,
+[Priority_Level] varchar(20) NULL,
+Due_Date datetime NULL,
+Status varchar(20) NULL,
+Activity varchar(255) NULL,
+
+CONSTRAINT Ch_PriorityLevel CHECK ([Priority_Level] = 'Low' OR [Priority_Level] = 'Normal' OR [Priority_Level] = 'Medium' OR [Priority_Level] = 'High'),
+
+CONSTRAINT CH_Status CHECK ([Status] = 'Not Started' OR [Status] = 'In Progress' OR [Status] = 'Waiting' OR [Status] = 'Completed' OR [Status] = 'Deferred')
+
+)
+
+CREATE TABLE CRM_User_Role (
+
+Login_ID int NULL, 
+Role_ID int NULL,
+Role_Start_Date datetime NULL,
+Role_End_Date datetime NULL,
+Role_Creation_Date datetime NULL
+
+)
+
+*/ All Key Constraints*/
+ALTER TABLE Store_Sales_Details
+ADD CONSTRAINT FK_Sale_ID
+FOREIGN KEY (Sale_ID) REFERENCES Store_Sales(Sale_ID)
+ON DELETE CASCADE ON UPDATE CASCADE
+
+ALTER TABLE Store_Sales_Details
+ADD CONSTRAINT FK_Product_ID
+FOREIGN KEY (Product_ID) REFERENCES Store_Products(Product_ID)
+ON DELETE CASCADE ON UPDATE CASCADE
+
+ALTER TABLE Store_Sales
+ADD CONSTRAINT FK_Employee_ID
+FOREIGN KEY (Employee_ID) REFERENCES Store_Employees(Employee_ID)
+ON DELETE CASCADE ON UPDATE CASCADE
+
+ALTER TABLE Store_Sales
+ADD CONSTRAINT FK_Customer_ID
+FOREIGN KEY (Customer_ID) REFERENCES Store_Customers(Customer_ID)
+ON DELETE CASCADE ON UPDATE CASCADE
+
+ALTER TABLE Store_Sales
+ADD CONSTRAINT FK_Tax_Status
+FOREIGN KEY (Tax_Status) REFERENCES Store_Orders_Tax_Status(Tax_Status)
+ON DELETE CASCADE ON UPDATE CASCADE
+
+--------------------------
+
+
+ALTER TABLE Stores
+ADD CONSTRAINT FK_Store_Type_ID
+FOREIGN KEY (Store_Type_ID) REFERENCES Store_Types(Store_Type_ID);
+
+ALTER TABLE Inventory_Transactions
+ADD CONSTRAINT FK_StoreID
+FOREIGN KEY (Store_ID REFERENCES Stores(Store_ID);
+
+ALTER TABLE Sales
+ADD CONSTRAINT FK_StoreID2
+FOREIGN KEY (Store_ID) REFERENCES Stores(Store_ID); 
+
+ALTER TABLE Customers
+ADD CONSTRAINT FK_StoreID3
+FOREIGN KEY (Store_ID) REFERENCES Stores(Store_ID);
+
+ALTER TABLE Customer_User_Passwords
+ADD CONSTRAINT FK_Customer_ID
+FOREIGN KEY(Customer_ID) REFERENCES Customers(ID);
+
+ALTER TABLE Customer_User_Passwords
+ADD CONSTRAINT FK_PasswordID (may have to remove constraint later)
+FOREIGN KEY (Password_ID) REFERENCES Customer_Password(Password_ID);  /* may need to add on update cascade / on delete cascade */ 
+
+ALTER TABLE Customer_Contact_Activity
+ADD CONSTRAINT FK_ActivityID
+FOREIGN KEY (Activity_ID) REFERENCES Activities(Activity_ID)
+ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE Customer_Contact_Activity
+ADD CONSTRAINT FK_CustomerID2
+FOREIGN KEY (Customer_ID) REFERENCES Customers(ID);
+
+ALTER TABLE Customer_Types
+ADD CONSTRAINT FK_Cust_Type_ID
+FOREIGN KEY (Cust_Type_ID) REFERENCES Types(Cust_Type_ID);
+
+ALTER TABLE Customer_Types
+ADD CONSTRAINT FK_CustomerID4
+FOREIGN KEY (Customer_ID) REFERENCES Customers(ID);
+
+ALTER TABLE CRM_User_Role
+ADD CONSTRAINT FK_LoginID
+FOREIGN KEY (Login_ID) REFERENCES CRM_User(Login_ID)
+ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE CRM_User_Role
+ADD CONSTRAINT FK_RoleID
+FOREIGN KEY (Role_ID) REFERENCES CRM_Roles(Role_ID)
+ON UPDATE CASCADE;
+
+ALTER TABLE CRM_User_Passwords
+ADD CONSTRAINT FK_LoginID2
+FOREIGN KEY (Login_ID) REFERENCES CRM_User(Login_ID);
+
+ALTER TABLE CRM_User_Tasks
+ADD CONSTRAINT FK_TaskID
+FOREIGN KEY (Task_ID) REFERENCES CRM_Tasks(Task_ID)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE CRM_User_Passwords
+ADD CONSTRAINT FK_CRMPasswordID
+FOREIGN KEY (Password_ID) REFERENCES CRM_Password(Password_ID)
+ON UPDATE CASCADE;
+
+ALTER TABLE Customer_Opportunities 
+ADD CONSTRAINT FK_CustomerID6
+FOREIGN KEY (Customer_ID) REFERENCES Customers(ID);
+
+ALTER TABLE Sales_Opportunity_Stage
+ADD CONSTRAINT FK_CustomerID7
+FOREIGN KEY (Customer_ID) REFERENCES Customers(ID);
+
+ALTER TABLE Sales_Opportunity_Stage 
+ADD CONSTRAINT FK_OpportunityStageID
+FOREIGN KEY (Opportunity_Stage_ID) REFERENCES Opportunity_Stages(Opportunity_Stage_ID); 
+
+ALTER TABLE Product_Interest
+ADD CONSTRAINT FK_CustomerID8 
+FOREIGN KEY (Customer_ID) REFERENCES Customers(ID);
+
+ALTER TABLE Product_Interest 
+ADD CONSTRAINT FK_ProductID2
+FOREIGN KEY (Product_ID) REFERENCES Products(ID);
+
+ALTER TABLE Customer_Service 
+ADD CONSTRAINT FK_CustomerID9
+FOREIGN KEY (Customer_ID) REFERENCES Customers(ID);
+
+ALTER TABLE Customer_Service
+ADD CONSTRAINT FK_ServiceStatusID
+FOREIGN KEY (Service_Status_ID) REFERENCES Customer_Service_Status(Service_Status_ID);
+
+ALTER TABLE Customer_Opportunities
+ADD CONSTRAINT FK_LeadSourceID
+FOREIGN KEY (Lead_Source_ID) REFERENCES Customer_Lead_Source(Lead_Source_ID); 
+
+
+ALTER TABLE Customer_Feedback 
+ADD CONSTRAINT FK_LeadSourceID2
+FOREIGN KEY (Lead_Source_ID) REFERENCES Customer_Lead_Source(Lead_Source_ID);
+
+ALTER TABLE Customer_Feedback 
+ADD CONSTRAINT FK_CustomerID10
+FOREIGN KEY (Customer_ID) REFERENCES Customers(ID);
+
+ALTER TABLE Customer_Leads
+ADD CONSTRAINT FK_CustomerID11
+FOREIGN KEY (Customer_ID) REFERENCES Customers(ID);
+
+ALTER TABLE Lead_Location
+ADD CONSTRAINT FK_CustomerID12
+FOREIGN KEY (Customer_ID) REFERENCES Customers(ID);
+
+ALTER TABLE Customer_Lead_Status
+ADD CONSTRAINT FK_CustomerID13
+FOREIGN KEY (Customer_ID) REFERENCES Customers(ID);
+
+ALTER TABLE Customer_Lead_Status
+ADD CONSTRAINT FK_StatusID2
+FOREIGN KEY (Status_ID) REFERENCES Lead_Status(Status_ID);
+
+ALTER TABLE Inventory_Transactions 
+ADD CONSTRAINT FK_Sale_ID0
+FOREIGN KEY (Sale_ID) REFERENCES Sales(Sale_ID); 
+
+ALTER TABLE Sales_Details
+ADD CONSTRAINT FK_ProductID3
+FOREIGN KEY (Product_ID) REFERENCES Products(ID);
+--------------------------
+
+
+INSERTS 
+
+---------------------------
+
+Store Table
+
+INSERT INTO Stores (Store_ID, Store_Name, Store_Address, City, [State_Province], ZIP_PostalCode, Country_Region, Store_Type_ID)
+VALUES (1, 'BooksRUs Store InStore 1', '21 Sykes Blvd', 'Pittsburgh', 'PA', 15220, 'Pennsylvania', 1);
+
+INSERT INTO Stores (Store_ID, Store_Name, Store_Address, City, [State_Province], ZIP_PostalCode, Country_Region, Store_Type_ID)
+VALUES (2, 'BooksRUs Store InStore 2', '31 Mirror Blvd', 'Pittsburgh', 'PA', 15220, 'Pennsylvania', 1);
+
+INSERT INTO Stores (Store_ID, Store_Name, Store_Address, City, [State_Province], ZIP_PostalCode, Country_Region, Store_Type_ID)
+VALUES (3, 'BooksRUs Store InStore 3', '41 Phillips', 'Pittsburgh', 'PA', 15220, 'Pennsylvania', 1);
+
+INSERT INTO Stores (Store_ID, Store_Name, Store_Address, City, [State_Province], ZIP_PostalCode, Country_Region, Store_Type_ID)
+VALUES (4, 'BooksRUs Online', 'https://www.booksrus.com', NULL, NULL, NULL, NULL, 2);
+
+---------------------------
+
+Store_Types Table
+
+INSERT INTO Store_Types (Store_Type_ID, Store_Type)
+VALUES (1, 'InStore');
+
+INSERT INTO Store_Types (Store_Type_ID, Store_Type)
+VALUES (2, 'Online');
+
+---------------------------
+
+Employees Table
+
+INSERT INTO Employees(Company, Last_Name, First_Name, Email_Address, Job_Title, Business_Phone, Home_Phone, Mobile_Phone, Fax_Number, Employee_Address, City, State_Province, ZIP_PostalCode, Country_Region)
+VALUES ('booksrus', 'Fernandez', 'Antonio', 'Antonio@booksrus.com', 'Manager', 1235550100, 1235550102, NULL, 1235550103, '123 1st Avenue', 'Seattle', 'WA', 99999, 'USA');
+
+INSERT INTO Employees(Company, Last_Name, First_Name, Email_Address, Job_Title, Business_Phone, Home_Phone, Mobile_Phone, Fax_Number, Employee_Address, City, State_Province, ZIP_PostalCode, Country_Region)
+VALUES ('booksrus', 'Smith', 'Abel', 'Abel@booksrus.com', 'Assistant Manager', 1235550100, 1235550102, NULL, 1235550103, '123 2nd Avenue', 'Bellevue', 'WA', 99999, 'USA');
+
+INSERT INTO Employees(Company, Last_Name, First_Name, Email_Address, Job_Title, Business_Phone, Home_Phone, Mobile_Phone, Fax_Number, Employee_Address, City, State_Province, ZIP_PostalCode, Country_Region)
+VALUES ('booksrus', 'Kremmer', 'Janet', 'jan@booksrus.com', 'Sales Representative', 1235550100, 1235550102, NULL, 1235550103, '123 3rd Avenue', 'Redmond', 'WA', 99999, 'USA');
+
+INSERT INTO Employees(Company, Last_Name, First_Name, Email_Address, Job_Title, Business_Phone, Home_Phone, Mobile_Phone, Fax_Number, Employee_Address, City, State_Province, ZIP_PostalCode, Country_Region)
+VALUES ('booksrus', 'Sergio', 'Maria', 'maria@booksrus.com', 'Sales Representative', 1235550100, 1235550102, NULL, 1235550103, '123 4th Avenue', 'Kirkland', 'WA', 99999, 'USA'); 
+
+INSERT INTO Employees(Company, Last_Name, First_Name, Email_Address, Job_Title, Business_Phone, Home_Phone, Mobile_Phone, Fax_Number, Employee_Address, City, State_Province, ZIP_PostalCode, Country_Region)
+VALUES ('booksrus', 'Thomas', 'Steven', 'steven@booksrus.com', 'Cashier', 1235550100, 1235550102, NULL, 1235550103, '123 5th Avenue', 'Seattle', 'WA', 9999, 'USA');
+
+INSERT INTO Employees(Company, Last_Name, First_Name, Email_Address, Job_Title, Business_Phone, Home_Phone, Mobile_Phone, Fax_Number, Employee_Address, City, State_Province, ZIP_PostalCode, Country_Region)
+VALUES ('booksrus', 'Omaba', 'Michelle', 'michelle@booksrus.com', 'Cashier', 1235550100, 1235550102, NULL, 1235550103, '123 6th Avenue', 'Redmond', 'WA', 9999, 'USA');
+
+INSERT INTO Employees(Company, Last_Name, First_Name, Email_Address, Job_Title, Business_Phone, Home_Phone, Mobile_Phone, Fax_Number, Employee_Address, City, State_Province, ZIP_PostalCode, Country_Region)
+VALUES ('booksrus', 'Zepeda', 'Robert', 'robert@booksrus.com', 'Librarian', 1235550100, 1235550102, NULL, 1235550103, '123 7th Avenue', 'Seattle', 'WA', 9999, 'USA');
+
+INSERT INTO Employees(Company, Last_Name, First_Name, Email_Address, Job_Title, Business_Phone, Home_Phone, Mobile_Phone, Fax_Number, Employee_Address, City, State_Province, ZIP_PostalCode, Country_Region)
+VALUES ('booksrus', 'Gordana', 'Laura', 'laura@booksrus.com', 'Cashier', 1235550100, 1235550102, NULL, 1235550103, '123 8th Avenue', 'Redmond', 'WA', 9999, 'USA');
+
+INSERT INTO Employees(Company, Last_Name, First_Name, Email_Address, Job_Title, Business_Phone, Home_Phone, Mobile_Phone, Fax_Number, Employee_Address, City, State_Province, ZIP_PostalCode, Country_Region)
+VALUES ('booksrus', 'Robles', 'Anita', 'anne@booksrus.com', 'Sales Representative', 1235550100, 1235550102, NULL, 1235550103, '123 9th Avenue', 'Seattle', 'WA', 9999, 'USA');
+
+----------------------------------
+Types Table
+
+INSERT INTO Types (Cust_Type_ID, Customer_Type)
+VALUES (1, 'Regular Customer'); 
+
+INSERT INTO Types (Cust_Type_ID, Customer_Type)
+VALUES (2, 'Discount Customer'); 
+
+INSERT INTO Types (Cust_Type_ID, Customer_Type)
+VALUES (3, 'Online Customer'); 
+
+-------------------------------------
+
+Customer_Types Table
+
+INSERT INTO Customer_Types (Customer_ID, Cust_Type_ID, Join_Date, Cancel_Date)
+VALUES (1, 1, '02-21-1992', NULL);
+
+INSERT INTO Customer_Types (Customer_ID, Cust_Type_ID, Join_Date, Cancel_Date)
+VALUES (2, 2, '02-20-1992', NULL);
+
+INSERT INTO Customer_Types (Customer_ID, Cust_Type_ID, Join_Date, Cancel_Date)
+VALUES (17, 3, '02-19-1993', NULL);
+
+--------------------------------------
+
+CRM_User Table
+
+INSERT INTO CRM_User (Login_ID, Last_Name, First_Name, Email_Address)
+VALUES (1, 'Gilbert', 'Shawn', 'Gibby@booksruscrm.com'); 
+
+INSERT INTO CRM_User (Login_ID, Last_Name, First_Name, Email_Address)
+VALUES (2, 'Slaton', 'Michael', 'MichaelS@booksruscrm.com'); 
+
+INSERT INTO CRM_User (Login_ID, Last_Name, First_Name, Email_Address)
+VALUES (3, 'Kindell', 'Bryan', 'BKindell@booksruscrm.com'); 
+
+---------------------------------------
+
+CRM_User_Role Table
+
+INSERT INTO CRM_User_Role (Login_ID, Role_ID, Role_Start_Date, Role_End_Date)
+VALUES (1, 1, '01-19-1992', NULL);
+
+INSERT INTO CRM_User_Role (Login_ID, Role_ID, Role_Start_Date, Role_End_Date)
+VALUES (2, 2, '01-25-1992', NULL);
+
+INSERT INTO CRM_User_Role (Login_ID, Role_ID, Role_Start_Date, Role_End_Date)
+VALUES (3, 1, '01-30-1992', NULL);
+
+----------------------------------------
+
+CRM_Roles Table
+
+INSERT INTO CRM_Roles (Role_ID, Role_Name, [Description])
+VALUES (1, 'Support Analyst', 'Ability to check campaign functionality and CRM data');
+
+INSERT INTO CRM_Roles (Role_ID, Role_Name, [Description])
+VALUES (2, 'Manager', 'Ability to access all CRM data');
+
+INSERT INTO CRM_Roles (Role_ID, Role_Name, [Description])
+VALUES (3, 'Administrator', 'Ability to mobile marketing campaigns and service driven data metics');
+
+----------------------------------------
+
+CRM_User_Passwords Table
+
+INSERT INTO CRM_User_Passwords (Password_ID, Login_ID)
+VALUES (1, 1);
+
+INSERT INTO CRM_User_Passwords (Password_ID, Login_ID)
+VALUES (2, 2)
+
+INSERT INTO CRM_User_Passwords (Password_ID, Login_ID)
+VALUES (3, 3);
+
+-----------------------------------------
+
+CRM_Password Table
+
+INSERT INTO CRM_Password (Password_ID, [Password], Pswd_Last_Updated, Pswd_Created_Date)
+VALUES (1, 'cheeze@12', '04-21-2018', '04-21-2018');
+
+
+INSERT INTO CRM_Password (Password_ID, [Password], Pswd_Last_Updated, Pswd_Created_Date)
+VALUES (2, 'greenlatern@7', '04-15-2018', '04-15-2018');
+
+
+INSERT INTO CRM_Password (Password_ID, [Password], Pswd_Last_Updated, Pswd_Created_Date)
+VALUES (3, 'captainplanet@5', '04-13-2018', '04-13-2018');
+
+------------------------------------------
+
+CRM_User_Tasks Table
+
+INSERT INTO CRM_User_Tasks (Login_ID, Task_ID)
+VALUES (1, 1);
+
+INSERT INTO CRM_User_Tasks (Login_ID, Task_ID)
+VALUES (2, 2);
+
+INSERT INTO CRM_User_Tasks (Login_ID, Task_ID)
+VALUES (17, 3);
+
+------------------------------------------
+
+CRM_Tasks Table
+
+INSERT INTO CRM_Tasks (Task_ID, [Priority_Level], Due_Date, [Status])
+VALUES (1,'Normal', '05-01-2018', 'Waiting');
+
+INSERT INTO CRM_Tasks (Task_ID, [Priority_Level], Due_Date, [Status])
+VALUES (2, 'Medium', '05-15-2018', 'In Progress');
+
+INSERT INTO CRM_Tasks (Task_ID, [Priority_Level], Due_Date, [Status])
+VALUES (3, 'Low', '07-20-2018', 'Not Started');
+
+---------------------------------------------
+
+Customer_Opportunities Table
+
+INSERT INTO Customer_Opportunities (Customer_ID, Lead_Source_ID, Topic, [Description], Opportunity_Amount, Follow_Up_Date,
+Last_Activity_Date, Last_Activity, Opportunity_Created_Date, Last_Modified_Date, Projected_Close_Date, Close_Probability,
+Projected_Revenue, Weighted_Revenue, Actual_Revenue, Currency_Type, Offer_Accepted_Date)
+VALUES(1, 1, 'Enroll in Book Subscription', 'There is a chance that customer is interested in opportunity for subscription to view ebooks from BooksRUs',
+ 1000, '04-22-2018', '02-18-2018', 'Sent Email', '01-22-2018', '04-22-2018', '05-01-2018', .30, 1750, 2000, 1300, 'U.S. Dollar', NULL); 
+
+INSERT INTO Customer_Opportunities (Customer_ID, Lead_Source_ID, Topic, [Description], Opportunity_Amount, Follow_Up_Date,
+Last_Activity_Date, Last_Activity, Opportunity_Created_Date, Last_Modified_Date, Projected_Close_Date, Close_Probability,
+Projected_Revenue, Weighted_Revenue, Actual_Revenue, Currency_Type, Offer_Accepted_Date)
+VALUES(2, 2, 'Interested in BooksRUs App', 'There is a chance that customer is interested buying books from online store',
+ 3000, '04-22-2018', '02-18-2018', 'Sent Email', '01-22-2018', '04-22-2018', '05-01-2018', .30, 2750, 3000, 2300, 'U.S. Dollar', NULL);
+
+ 
+INSERT INTO Customer_Opportunities (Customer_ID, Lead_Source_ID, Topic, [Description], Opportunity_Amount, Follow_Up_Date,
+Last_Activity_Date, Last_Activity, Opportunity_Created_Date, Last_Modified_Date, Projected_Close_Date, Close_Probability,
+Projected_Revenue, Weighted_Revenue, Actual_Revenue, Currency_Type, Offer_Accepted_Date)
+VALUES(17, 2, 'Interest in Pumping Prickle Pants Series', 'Interested in purchasing book series after telemarketing call.',
+ 2000, '04-22-2018', '02-18-2018', 'Sent Email', '01-22-2018', '04-22-2018', '05-01-2018', .30, 1750, 2000, 1300, 'U.S. Dollar', NULL); 
+
+---------------------------------------------
+
+Customer_Opportunity_Stage Table
+
+INSERT INTO Sales_Opportunity_Stage (Customer_ID, Opportunity_Stage_ID)
+VALUES (1, 1);
+
+INSERT INTO Sales_Opportunity_Stage (Customer_ID, Opportunity_Stage_ID)
+VALUES (2, 2);
+
+INSERT INTO Sales_Opportunity_Stage (Customer_ID, Opportunity_Stage_ID)
+VALUES (17, 1); 
+ 
+---------------------------------------------
+
+Opportunity_Stages Table
+
+INSERT INTO Opportunity_Stages (Opportunity_Stage_ID, Sales_Pipeline_Stage)
+VALUES (1, 'Qualification');
+
+INSERT INTO Opportunity_Stages (Opportunity_Stage_ID, Sales_Pipeline_Stage)
+VALUES (2, 'Discovery');
+
+INSERT INTO Opportunity_Stages (Opportunity_Stage_ID, Sales_Pipeline_Stage)
+VALUES (3, 'Meeting');
+
+INSERT INTO Opportunity_Stages (Opportunity_Stage_ID, Sales_Pipeline_Stage)
+VALUES (4, 'Proposal');
+
+INSERT INTO Opportunity_Stages (Opportunity_Stage_ID, Sales_Pipeline_Stage)
+VALUES (5, 'Closed Won');
+
+--------------------------------------------
+
+Product_Interest Table
+
+
+INSERT INTO Product_Interest (Customer_ID, Product_ID)
+VALUES (1, 1);
+
+INSERT INTO Product_Interest (Customer_ID, Product_ID)
+VALUES (2, 2);
+
+INSERT INTO Product_Interest (Customer_ID, Product_ID)
+VALUES (17, 1);
+
+---------------------------------------------
+
+Customer_Service_Status Table
+
+INSERT INTO Customer_Service_Status (Service_Status_ID, Service_Status)
+VALUES (1, 'Fair');
+
+INSERT INTO Customer_Service_Status (Service_Status_ID, Service_Status)
+VALUES (2, 'Poor');
+
+INSERT INTO Customer_Service_Status (Service_Status_ID, Service_Status)
+VALUES (3, 'Good'); 
+
+INSERT INTO Customer_Service_Status (Service_Status_ID, Service_Status)
+VALUES (4, 'Great');
+
+INSERT INTO Customer_Service_Status (Service_Status_ID, Service_Status)
+VALUES (5, 'Excellent');
+
+---------------------------------------------
+
+Customer_Service Table 
+
+INSERT INTO Customer_Service (Customer_ID, Service_Status_ID)
+VALUES (1, 1);
+
+INSERT INTO Customer_Service (Customer_ID, Service_Status_ID)
+VALUES (2, 2);
+
+INSERT INTO Customer_Service (Customer_ID, Service_Status_ID)
+VALUES (17, 1);
+
+--------------------------------------------
+
+Customer_Feedback Table
+
+INSERT INTO Customer_Feedback (Customer_ID, Lead_Source_ID, System_Used, Remarks, Satisfaction_Level, Affordability_Level)
+VALUES (1, 2, 'Facebook', 'I really enjoy the Petunia Pumping Prickle Pants Series. I am so glad I clicked the ad for this series on the parent
+facing side of the BooksRUs App. This might get my child interested in reading more', 5,5); 
+
+INSERT INTO Customer_Feedback (Customer_ID, Lead_Source_ID, System_Used, Remarks, Satisfaction_Level, Affordability_Level)
+VALUES (2, 2, 'BooksRUs App', 'I enjoyed reading the Petunia series keep it going BooksRus!', 5, 5); 
+
+INSERT INTO Customer_Feedback (Customer_ID, Lead_Source_ID, System_Used, Remarks, Satisfaction_Level, Affordability_Level)
+VALUES (17, 2, 'BooksRUs App', 'I am not so sure this Petunia series is my cup of tea so to speak, but if it helps my child read that''s what counts!', 2, 5); 
+
+--------------------------------------------
+
+Lead_Location Table
+
+INSERT INTO Lead_Location (Customer_ID, Lead_Geolocation, Carrier, Country_Code, Mobile_Network_Code)
+VALUES (41, '40.4406° N, 79.9959° W', 'AT&T', '+1', '3547' ); 
+
+INSERT INTO Lead_Location (Customer_ID, Lead_Geolocation, Carrier, Country_Code, Mobile_Network_Code)
+VALUES (42, '41.8781° N, 87.6298° W', 'Verizon', '+1', '3689' ); 
+
+INSERT INTO Lead_Location (Customer_ID, Lead_Geolocation, Carrier, Country_Code, Mobile_Network_Code)
+VALUES (43, '40.5683° N, 80.0141° W', 'Sprint', '+1', '35442' ); 
+
+--------------------------------------------
+
+Customer_Lead_Status Table
+
+INSERT INTO Customer_Lead_Status (Customer_ID, Status_ID)
+VALUES (41, 1);
+
+INSERT INTO Customer_Lead_Status (Customer_ID, Status_ID)
+VALUES (42, 1);
+
+--------------------------------------------
+
+Lead Status Table
+
+
+INSERT INTO Lead_Status (Status_ID, Status)
+VALUES (1, 'Open');
+
+INSERT INTO Lead_Status (Status_ID, Status)
+VALUES (2, 'Working');
+
+INSERT INTO Lead_Status (Status_ID, Status)
+VALUES (3, 'Closed Converted');
+
+INSERT INTO Lead_Status (Status_ID, Status)
+VALUES (4, 'Closed Not Converted');
+
+---------------------------------------------
+
+QUERIES
+
+---------------------------------------------
+
+/* Query to identify customer with their feedback (Customer Feedback Report) */
+
+SELECT Customers.ID AS "Customer ID", Customers.First_Name AS "First Name", Customers.Last_Name AS "Last Name", Customer_Feedback.Remarks, Customer_Feedback.Satisfaction_Level AS "Level of Satisfaction", Customer_Feedback.Affordability_Level AS "Level of Affordability"
+FROM Customer_Feedback
+LEFT JOIN Customers ON Customer_Feedback.Customer_ID = Customers.ID
+
+/* Query to identify the average level of customer satisfaction and affordability (Seen in Customer Feedback Report) */
+SELECT AVG(Satisfaction_Level) AS "Average Level of Satisfaction", AVG(Affordability_Level) AS "Average Level of Affordability"
+FROM Customer_Feedback;
+
+
+/* This query shows the type of customer and membership they have */
+SELECT Customers.ID AS "Customer ID", Customers.First_Name AS "First Name", Customers.Last_Name AS "Last Name", Types.Customer_Type AS "Type of Customer", Store_Types.Store_Type AS "Location of Transaction" FROM Customer_Types
+LEFT JOIN Types ON Customer_Types.Cust_Type_ID = Types.Cust_Type_ID
+LEFT JOIN Customers ON Customer_Types.Customer_ID = Customers.ID
+INNER JOIN Stores ON Customers.Store_ID = Stores.Store_ID
+LEFT JOIN Store_Types ON Stores.Store_Type_ID = Store_Types.Store_Type_ID;
+
+
+/* This query identifies which customer had made a purchase and at which or what kind of store this occurred. */
+SELECT Customers.ID, Customers.First_Name, Customers.Last_Name, Sales.Sale_Date, 
+Sales.Payment_Type, Sales_Details.Quantity, Sales_Details.Unit_Price, Store_Types.Store_Type FROM Customers
+INNER JOIN Sales ON Customers.ID = Sales.Customer_ID
+LEFT JOIN Sales_Details ON Sales.Sale_ID = Sales_Details.Sale_ID
+INNER JOIN Stores ON Sales.Store_ID = Stores.Store_ID
+LEFT JOIN Store_Types ON Stores.Store_Type_ID = Store_Types.Store_Type_ID;
+
+/* Query can be used to see how many Petunia books were purchased */
+select Products.ID, Sales_Details.Sale_ID, Products.Product_Name, Sales_Details.Quantity FROM Products
+RIGHT JOIN Sales_Details ON Products.ID = Sales_Details.Product_ID;
+
+-----------------------------------
+
+TRANSACTIONS
+
+-----------------------------------
+
+
+BEGIN TRAN t2
+
+DECLARE @Sale_ID BIGINT
+
+INSERT Sales
+VALUES (3, 3, '02-16-2002', 0.0, 'Check', NULL, 0.0, NULL, 2)
+
+SET @Sale_ID = SCOPE_IDENTITY()
+
+INSERT Sales_Details
+VALUES (@Sale_ID, 3, 4, 10.00, 0.0, '02-03-1992', 7)
+
+INSERT Inventory_Transactions
+VALUES (1, '02-16-2002', '02-16-2002', 7, 3, 6, @Sale_ID, NULL, 2);
+
+COMMIT TRAN t2;
+
+

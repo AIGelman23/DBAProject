@@ -3,3 +3,47 @@
 ALTER TABLE Orders
 ADD CONSTRAINT FK_PersonOrder
 FOREIGN KEY (PersonID) REFERENCES Persons(PersonID); 
+
+
+Foreign key constraint added between Stores and Store Types tables on Store_Type_ID. done
+Foreign key constraint added between Stores and Inventory Transactions table on Store_ID. done
+Foreign key constraint added between Stores and Sales table on Store_ID.done
+Foreign key constraint added between Stores and Customers table on Store_ID. done
+Foreign key constraint added between Customers and Customer_User_passwords tables on Customer_ID. done
+Foreign key constraint added between Customer_Password and Customer_User_Passwords on Password_ID. done
+Foreign key constraint added between Activities and Customer_Contact_Activity on Activity_ID. done 
+(w/update delete cascade).
+Foreign key constraint added between Customer_Contact_Activity and Customers table on Customer_ID. done 
+Foreign key constraint added between Customer_Types and Types table on Cust_Type_ID. done
+Foreign key constraint added between Customers and Customer_Types table on Customer_ID. done
+Foreign key constraint added between CRM_User and CRM_User_Role table on Login_ID. done
+(w/update delete cascade).
+Foreign key constraint added between CRM_User_Role and CRM_Roles on Role_ID. done
+(w/update cascade)
+Foreign key constraint added between CRM_User and CRM_User_Passwords on Login_ID. done
+Foreign key constraint added between CRM_User_Passwords and CRM_Password on Password_ID. done
+(w/ update cascade)
+Foreign key constraint added between Customer_Opportunities and Customers table on Customer_ID. done
+Foreign key constraint added between Sales_Opportunity_Stage and Customers table on Customer_ID. done
+Foreign key constraint added between Sales_Opportunity_Stage and Opportunity_Stages on Opportunity_Stage_ID. done
+Foreign key constraint added between Product_Interest and Products on Product_ID. done
+Foreign key constraint added between Product_Interest and Customers on Customer_ID. done
+Foreign key constraint added between Customer_Service_Status and Customer_Service on Service_Status_ID. done
+Foreign key constraint added between Customer_Service and Customers on Customer_ID. done
+Foreign key constraint added between Customer_Opportunities and Customer_Lead_Source on Lead_Source_ID. done
+Foreign key constraint added between Customer_Feedback and Customer_Lead_Source table on Lead_Source_ID. done
+Foreign key constraint added between Customer_Leads and Customers table on Customer_ID. done
+
+ALTER TABLE Customer_Leads
+ADD CONSTRAINT FK_CustomerID11
+FOREIGN KEY (Customer_ID) REFERENCES Customers(ID);
+
+Foreign key needs to be added between Lead_Location and Customer_Leads table on Lead_ID
+
+INSERT INTO Lead_Location (Lead_Location_ID, Lead_ID, Lead_Geolocation, Carrier, Country_Code, Mobile_Network_Code)
+VALUES (); 
+
+ALTER TABLE Lead_Location
+ADD CONSTRAINT FK_Lead_ID
+FOREIGN KEY (Lead_ID) REFRENCES Lead_Location(Lead_ID); 
+

@@ -1,0 +1,70 @@
+CRMUsers
+
+UserID
+UserName
+LastName
+FirstName
+Job_Title
+Email_Address
+Password
+
+
+CustomerFeedback (Leads)
+
+Customer_ID
+UserName (might be unique - fb and app would have this)
+System-Used (Facebook, Phone System, App)
+LastName
+FirstName
+Email_Address (might be unique - fb and app would have this)
+Home_Phone 
+Mobile_Phone
+Fax_Number
+Address1
+Remarks (comments about product)
+Service_Status_ID (FK - Need to Email, Need to Call)
+Satisfaction_Level (1-poor 5-excellent)
+
+
+CustomerServiceStatus
+
+Customer_ID 
+Service_Status_ID bigint Increment (
+Service_Status (Need to Email, Need to Call, Out of Country - could be utilized as an optional drop down or just fill in )
+
+CustomerContact
+
+Contact_ID
+Customer_ID
+Contact_Last_Name
+Contact_First_Name
+Jobt_Title (title)
+Email_Address
+Home_Phone
+Mobile_Phone
+Fax_Number
+Address1 (primary address)
+Address2 (other address)
+Website
+Lead_Origination (Source: Facebook, Phone System, App)
+Customer_
+
+
+
+Customer_Contact_Group
+
+GroupID
+GroupName
+ContactID
+
+
+(on application side this allows a sales person orc crm agent
+to mark customer contact with appropriate status for immediate action to avoid losing a prospect) 
+
+
+(somehow include online details in store if possible)
+
+Contacts
+
+
+http://www.icrm.com.my/how-to-create-service-history-status/

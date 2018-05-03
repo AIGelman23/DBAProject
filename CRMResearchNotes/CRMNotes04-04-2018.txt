@@ -1,0 +1,29 @@
+Customer_Opportunities
+
+Contact_ID
+Customer_ID
+Sales_Pipeline_Stage (Qualification, Discovery, Meeting, Proposal, Closed Won)
+Opportunity_Type (----
+Opportunity_Amount (dollar amount of sales opportunity)
+Lead_Source (App, FB, Phone System)
+Product_Interest (particular book)
+Follow_Up_Date (date/time of follow up with customer)
+Last_Activity_Date (date/time)
+Last_Activity (Emailed client or called customer)
+Created_Date (date/time of opportunity that was created)
+Last_Modified_Date (date/time of opportunity that was modified)
+Projected_Close_Date (date/time estimated that opportunity will 
+be closed)
+Close_Probability (percentage or decimal amount ex. 
+25% (.25), 50% (.50), 75% (.75) or 100%
+Projected_Revenue (ex. 10,000)
+Weighted_Revenue (multiply by probability percentage (ex. 50%) multiply weighted revenue by 0.01) = Weighted Revenue
+Actual_Revenue (entered when closing an opportunity record)
+Currency_Type (US Dollar, Canadian etc)
+Offer_Accepted_Date (date/time offer was accepted)
+Topic (Topic of the opportunity that exists)
+Description (description of the opportunity that is available)
+
+Source_Campaign (app parent facing side ad for “Petunia Pumping Prickle Pants”)
+Status (Pending, Open, Won, Lost)
+
